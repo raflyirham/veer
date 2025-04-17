@@ -4,8 +4,9 @@ import { Providers } from "./providers";
 import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
-  title: "Veer",
-  description: "Veer is a platform for creating and sharing your ideas.",
+  title: "Veer | Your Task Management Tool",
+  description:
+    "Veer is a task management tool that helps you manage your tasks easier, better, and faster.",
 };
 
 export default function RootLayout({

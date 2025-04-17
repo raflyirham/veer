@@ -1,4 +1,3 @@
-import db from "@/libs/db";
 import Link from "next/link";
 import { getLatestTasks, getTaskSummary } from "@/app/actions/task";
 
@@ -44,7 +43,7 @@ export default async function Dashboard() {
           Latest Created Tasks
         </h2>
 
-        {!!latestTasks?.length ? (
+        {latestTasks?.length ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
             <Link
               href="/tasks/1"
