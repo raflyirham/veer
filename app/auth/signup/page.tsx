@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useActionState, useEffect, useState } from "react";
 import { signUp } from "@/app/actions/auth";
 import toast from "react-hot-toast";
+import Image from "next/image";
 
 interface ResponseState {
   success: boolean;
@@ -36,7 +37,21 @@ export default function SignUp() {
 
   return (
     <div className="min-h-screen flex flex-row">
-      <div className="w-1/2 bg-blue-500"></div>
+      <div className="w-1/2 bg-blue-500 relative">
+        <Link
+          href="/"
+          className="text-white text-3xl font-bold absolute top-4 left-4 z-11"
+        >
+          Veer
+        </Link>
+        <div className="bg-black/50 absolute top-0 left-0 w-full h-full z-10"></div>
+        <Image
+          src="/assets/illustrations/signup.jpg"
+          alt="Task Management"
+          className="w-full h-full object-cover"
+          fill
+        />
+      </div>
 
       <div className="w-1/2 flex flex-col items-center justify-center px-10">
         <form
@@ -45,7 +60,7 @@ export default function SignUp() {
         >
           <div className="flex flex-col gap-2">
             <h1 className="text-2xl font-semibold text-black">
-              Welcome to Veer 🚀
+              Welcome to Veer! 🚀
             </h1>
             <p className="text-gray-500 text-sm">
               Sign up to create your account
@@ -53,7 +68,9 @@ export default function SignUp() {
           </div>
 
           <div className="flex flex-col gap-3">
-            <label htmlFor="fullName">Full Name:</label>
+            <label htmlFor="fullName">
+              <span className="text-red-500">*</span> Full Name:
+            </label>
             <input
               required
               type="text"
@@ -73,7 +90,9 @@ export default function SignUp() {
           </div>
 
           <div className="flex flex-col gap-3">
-            <label htmlFor="email">Email:</label>
+            <label htmlFor="email">
+              <span className="text-red-500">*</span> Email:
+            </label>
             <input
               required
               type="email"
@@ -93,7 +112,9 @@ export default function SignUp() {
           </div>
 
           <div className="flex flex-col gap-3">
-            <label htmlFor="password">Password:</label>
+            <label htmlFor="password">
+              <span className="text-red-500">*</span> Password:
+            </label>
             <input
               required
               type="password"
@@ -113,7 +134,9 @@ export default function SignUp() {
           </div>
 
           <div className="flex flex-col gap-3">
-            <label htmlFor="passwordConfirmation">Confirm Password:</label>
+            <label htmlFor="passwordConfirmation">
+              <span className="text-red-500">*</span> Confirm Password:
+            </label>
             <input
               required
               type="password"
