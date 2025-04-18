@@ -5,7 +5,6 @@ import db from "@/libs/db";
 import { signUpSchema } from "@/schemas/user";
 import bcrypt from "bcryptjs";
 import { isRedirectError } from "next/dist/client/components/redirect-error";
-import { redirect } from "next/navigation";
 
 interface ResponseState {
   success: boolean;

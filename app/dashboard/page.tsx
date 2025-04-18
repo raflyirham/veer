@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { getLatestTasks, getTaskSummary } from "@/app/actions/task";
+import { getLatestTasks, getUserTaskSummary } from "@/app/actions/task";
 
 export default async function Dashboard() {
-  const { data: taskSummary } = await getTaskSummary();
+  const { data: taskSummary } = await getUserTaskSummary();
   const { data: latestTasks } = await getLatestTasks();
 
   return (

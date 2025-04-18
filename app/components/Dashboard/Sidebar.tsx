@@ -64,8 +64,7 @@ export default function Sidebar() {
       return pathname === href;
     }
 
-    const removedPrefix = pathname.replace("/dashboard", "");
-    return removedPrefix === href.replace("/dashboard", "");
+    return pathname.includes(href);
   };
 
   return (
